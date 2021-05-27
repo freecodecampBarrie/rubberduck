@@ -1,4 +1,4 @@
-# rubberduck
+# rubberduck - V.5 May 28, 2021
 
 We're going to make a web app that re-creates the [Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) experience.
 
