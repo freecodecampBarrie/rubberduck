@@ -4,6 +4,8 @@ We're going to make a web app that re-creates the [Rubber Duck Debugging](https:
 
 Here's the [wireframe](https://www.figma.com/file/V01n0TKenJSTtXLmQXE8dU/Rubber-Duck-Debugging?node-id=5%3A90) of what we're aiming for [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product).
 
+Here's our [Trello Board](https://trello.com/b/b4Mqzw98/mern-rubber-duck-debug), ask during Zoom call to become a member.
+
 We'll also be referencing this [tutorial](https://dev.to/andrewbaisden/creating-mern-stack-applications-2020-4a44) to setup the MERN stack. [Paul](https://github.com/paulywill) is hacking on a boilerplate [demo](https://github.com/paulywill/anime-tracker).
 
 Goals within 2-3 hour meetup:
