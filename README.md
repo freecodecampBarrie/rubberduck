@@ -8,7 +8,7 @@ Here's our [Trello Board](https://trello.com/b/b4Mqzw98/mern-rubber-duck-debug),
 
 We'll also be referencing this [tutorial](https://dev.to/andrewbaisden/creating-mern-stack-applications-2020-4a44) to setup the MERN stack. [Paul](https://github.com/paulywill) is hacking on a boilerplate [demo](https://github.com/paulywill/anime-tracker).
 
-Goals within 2-3 hour meetup:
+Goals within [2](https://www.google.com/search?q=countdown+for+2+hours)-[3](https://www.google.com/search?q=countdown+for+3+hours) hour meetup:
 - [ ] Discuss workflow with group
 - [ ] Setup ideal environment / Trello / IDE / Sharing Etc.
 - [ ] working MERN stack
