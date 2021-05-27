@@ -16,6 +16,10 @@ Goals within [2](https://www.google.com/search?q=countdown+for+2+hours)-[3](http
 - [ ] Host working MVP on [Heroku](https://www.heroku.com
 )/[Netify](https://www.netlify.com/
 )/whereever
+- [ ] Add some CI/CD for fun?
 - [ ] Redirect with newly purchased Google domain [quackback.dev](quackback.dev)
 - [ ] Find out how effective Zoom + hackathon can really be [VS Code](https://code.visualstudio.com) vs. [Repl.it](repl.it) vs. [Codesandbox](https://codesandbox.io)
 
+
+------
+**HOT TIP**: To open links in a new tab users can just do a CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link
