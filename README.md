@@ -24,3 +24,5 @@ Goals within [2](https://www.google.com/search?q=countdown+for+2+hours) _**OR**_
 
 ------
 **HOT TIP**: To open links in a new tab users can just do a CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link
+
+**HOT TIP**: To close tab, just do CTRL+W.
