@@ -1,4 +1,4 @@
-# Rubberduck Project
+# The Rubberduck Project
 
 
 We're going to make a web app that re-creates the [Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) experience.
@@ -11,7 +11,7 @@ We also have a [Github Team](https://github.com/orgs/freecodecampBarrie/teams/ru
 
 We'll also be referencing this [tutorial](https://dev.to/andrewbaisden/creating-mern-stack-applications-2020-4a44) to setup the [MERN stack](https://en.wikipedia.org/wiki/MEAN_(solution_stack)). 
 
-[@paulywill](https://github.com/paulywill) is hacking on a boilerplate [demo](https://github.com/paulywill/anime-tracker).
+[@paulywill](https://github.com/paulywill) tested and showcased the tutorial's [demo](https://github.com/paulywill/anime-tracker).
 
 Goals within [2](https://www.google.com/search?q=countdown+for+2+hours) _**OR**_ [3](https://www.google.com/search?q=countdown+for+3+hours) hour meetups:
 - [x] Discuss workflow with group
@@ -30,7 +30,7 @@ Goals within [2](https://www.google.com/search?q=countdown+for+2+hours) _**OR**_
 ----
 ## Requirements
 
-You are going to need the following install on your machine:
+You are going to need the following installed on your machine:
 
 - [VS Code](https://code.visualstudio.com/download) (optional but recommended)
 - [Git](https://git-scm.com/downloads) installed
@@ -76,8 +76,7 @@ It's there's any work covered between then (hopefully working CRUD) we'll regrou
 
 ----
 
-
-
 **HOT TIP**: To open links in a new tab users can just do a CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link
 
 **HOT TIP #2**: Have snacks and beverages near by.
+
