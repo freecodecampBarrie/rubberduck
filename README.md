@@ -58,7 +58,7 @@ You are going to need the following installed on your machine:
 
 We covered a lot of ground as far as what we're trying to create and the Github workflow.
 
-Even created a database cluster and able to connect. [@paulywill](https://github.com/paulywill) struggled with connecting a new cluster (as described in #6), so we decided to use one that was already created previously and connect to that one.
+Even created a database cluster and able to connect. [@paulywill](https://github.com/paulywill) struggled with connecting a new cluster (as described in [#1](https://github.com/freecodecampBarrie/rubberduck/issues/1)), so we decided to use one that was already created previously and connect to that one.
 
 Although did not get as far as ambitions hoped for, we did get get a good footing for next month's meeting.
 
