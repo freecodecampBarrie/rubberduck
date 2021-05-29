@@ -42,16 +42,24 @@ You are going to need the following installed on your machine:
 2. Clone your fork to your computer (aka "local machine"): 
 
     `git clone https://github.com/[your_username]/rubberduck.git`
-3. Install node packages:
+    
+3. Set up remotes to work with team
+
+    `git remote add upstream https://github.com/freecodecampbarrie/rubberduck.git`
+    
+    `git remote --v`
+    
+    
+5. Install node packages:
 
     `cd backend`
 
     `npm install`
 
-4. Create MongoDB, we're using an online service (free tier) [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). If you want the same one we're using just ask one of us for the secret credentials (just not [@paulywill's](https://github.com/paulywill) credit card  [@T357A](https://github.com/T357A)!!!)
+5. Create MongoDB, we're using an online service (free tier) [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). If you want the same one we're using just ask one of us for the secret credentials (just not [@paulywill's](https://github.com/paulywill) credit card  [@T357A](https://github.com/T357A)!!!)
 
 
-5. Once the MongoDB is setup you need to make to a `.env` file in the `backend` directory. You can reference `env.sample` for the basic setup to connect to the MongoDB Atlas database we're using.
+6. Once the MongoDB is setup you need to make to a `.env` file in the `backend` directory. You can reference `env.sample` for the basic setup to connect to the MongoDB Atlas database we're using.
 
 ----
 ## Meetup V.5 - May 28, 2021
