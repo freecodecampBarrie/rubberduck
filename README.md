@@ -1,6 +1,5 @@
 # The Rubberduck Project
 
-
 We're going to make a web app that re-creates the [Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) experience.
 
 Here's the [wireframe](https://www.figma.com/file/V01n0TKenJSTtXLmQXE8dU/Rubber-Duck-Debugging?node-id=5%3A90) of what we're aiming for [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product).
@@ -75,8 +74,6 @@ We'll continue on.
 It's there's any work covered between then (hopefully working CRUD) we'll regroup and discuss what the next [Sprint](https://en.wikipedia.org/wiki/Scrum_Sprint) will be.
 
 ----
-
 **HOT TIP**: To open links in a new tab users can just do a CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link
 
 **HOT TIP #2**: Have snacks and beverages near by.
-
