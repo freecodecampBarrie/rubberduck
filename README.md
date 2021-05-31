@@ -47,9 +47,14 @@ You are going to need the following installed on your machine:
 
     `git remote add upstream https://github.com/freecodecampbarrie/rubberduck.git`
     
-    `git remote --v`
+   You should see some similar after entering: `git remote --v`
     
-    
+    ```
+     origin  https://github.com/[userid]/rubberduck.git (fetch)
+     origin  https://github.com/[userid]/rubberduck.git (push)
+     upstream        https://github.com/freecodecampBarrie/rubberduck.git (fetch)
+     upstream        https://github.com/freecodecampBarrie/rubberduck.git (push)
+    ```
 5. Install node packages:
 
     `cd backend`
