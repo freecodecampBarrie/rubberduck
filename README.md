@@ -73,9 +73,9 @@ We covered a lot of ground as far as what we're trying to create and the Github 
 
 Even created a database cluster and able to connect. [@paulywill](https://github.com/paulywill) struggled with connecting a new cluster (as described in [#1](https://github.com/freecodecampBarrie/rubberduck/issues/1)), so we decided to use one that was already created previously and connect to that one.
 
-Although did not get as far as ambitions hoped for, we did get get a good footing for next month's meeting.
+Although did not get as far as ambitions hoped for, we did get a good footing for next month's meeting.
 
-In the mean, keep pushing for PRs and merging changes you think is appropriate. Do not worry about breaking anything, that's the point.
+In the mean, keep pushing for PRs and merging changes you think are appropriate. Do not worry about breaking anything, that's the point.
 
 Will update the [minutes](https://github.com/freecodecampBarrie/meetings/tree/main/2021/v5_2021) in our [meetings](https://github.com/freecodecampBarrie/meetings) repo.
 
