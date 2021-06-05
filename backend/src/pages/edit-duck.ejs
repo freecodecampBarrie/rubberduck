@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add Duck</title>
-    </head>
-    <body>
-        <h1>Add Duck</h1>
 
-        <form method="POST" action="/add-duck">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <% if(editing){ %>Edit Duck<% } else { %>Add Duck<% } %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <% if(editing){ %>Edit Duck<% } else { %>Add Duck<% } %>
+    </h1>
+
+    <form method="POST" action="/<% if(editing){ %>edit-duck<% } else { %>add-duck<% } %>">
+        <div>
+            <label>User</label>
+            <input type="text" name="user" value="<% if(editing){ %><%= duck.user %><% } %>" required />
+        </div>
+        <div>
+            <label>Problem</label>
+            <input type="text" name="problem" value="<% if(editing){ %><%= duck.problem %><% } %>" required />
+        </div>
+        <div>
+            <label>Goal</label>
+            <input type="text" name="name" value="<% if(editing){ %><%= duck.goal %><% } %>" required />
+        </div>
+        <div>
+            <label>Steps</label>
+            <input type="text" name="name" value="<% if(editing){ %><%= duck.steps %><% } %>" required />
+        </div>
+        <% if(editing){ %>
             <div>
-                <label>User</label>
-                <input type="text" name="user" required />
+                <input type="hidden" name="duckId" value="<%= duck.id %>" />
             </div>
-            <div>
-                <label>Problem</label>
-                <input type="text" name="problem" required />
-            </div>
-            <div>
-                <label>Goal</label>
-                <input type="text" name="goal" required />
-            </div>
-            <div>
-                <label>Steps</label>
-                <input type="number" name="steps" required />
-            </div>
-            <div>
-                <button type="submit">Add Duck</button>
-            </div>
-        </form>
-    </body>
+            <% } %>
+                <div>
+                    <button type="submit">
+                        <% if(editing){ %>Edit Duck<% } else { %>Add Duck<% } %>
+                    </button>
+                </div>
+    </form>
+</body>
+
 </html>

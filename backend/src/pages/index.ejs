@@ -7,5 +7,16 @@
     </head>
     <body>
         <h1>Home Page</h1>
+
+        <main>
+            <% duck.forEach(data => { %>
+                <ul>
+                    <li><h1>User: <a href="/<%= data.id %>"><%= data.user %></a></h1></li>
+                    <li><p>The problem is: <%= data.problem %></p></li>
+                    <li><p>The goal is to: <%= data.goal %></p></li>
+                    <li><p>The # of estimated steps: <%= data.steps %></p></li>
+                </ul>
+            <% }) %>
+        </main>
     </body>
 </html>
