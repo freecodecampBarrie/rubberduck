@@ -20,4 +20,4 @@ const DuckSchema = mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('series', DuckSchema);
+module.exports = mongoose.model('problems', DuckSchema);
