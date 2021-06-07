@@ -17,7 +17,7 @@ Goals within [2](https://www.google.com/search?q=countdown+for+2+hours) _**OR**_
 - [x] Setup ideal environment / Trello / IDE / Sharing Etc.
 - [ ] working MERN stack
     - [x] creating a database
-    - [ ] getting all the CRUD parts working
+    - [x] getting all the CRUD parts working
     - [ ] React frontend that tackles close to [wireframe/prototype](https://www.figma.com/file/V01n0TKenJSTtXLmQXE8dU/Rubber-Duck-Debugging?node-id=5%3A90)
 - [ ] Host working MVP on [Heroku](https://www.heroku.com
 )/[Netify](https://www.netlify.com/
