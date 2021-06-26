@@ -3,8 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  browserHistory
+  Link
 } from "react-router-dom";
 
 import Duck from './Duck';
@@ -57,9 +56,9 @@ const App = () => {
         </div>
 
         <Switch>
-          <Router history={browserHistory}>
-            <Route path='*' component={App} />
-          </Router>,
+          <Route path="/about">
+            <Duck />
+          </Route>
         </Switch>
         
       </Router>
