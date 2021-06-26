@@ -3,11 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  browserHistory
 } from "react-router-dom";
 
-
 import Duck from './Duck';
+
 
 const App = () => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const App = () => {
 
   return (
     <Fragment>
+
       <h1>Duck Home</h1>
       <Router>
         <div>
@@ -43,7 +45,7 @@ const App = () => {
                   <ul>
                     <li>
                       <h1>
-                        <Link to="/duck">{data.user}</Link>
+                        <Link to={data._id}>{data.user}</Link>
                         {/* <a href={data._id}></a> */}
                       </h1>
                     </li>
@@ -55,16 +57,14 @@ const App = () => {
         </div>
 
         <Switch>
-          <Route path="/duck">
-            <Duck />
-          </Route>
+          <Router history={browserHistory}>
+            <Route path='*' component={App} />
+          </Router>,
         </Switch>
+        
       </Router>
     </Fragment>
   );
-
-
-
 };
 
 
