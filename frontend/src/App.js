@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useEffect, useState } from 'react';
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    const getAPI = async () => {
+      const response = await fetch('http://localhost:8080/');
+      const data = await response.json();
+
+      try {
+        console.log(data);
+        setLoading(false);
+        setDuck(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getAPI();
+  }, []);
+
+  const [duck, setDuck] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h1>Duck Home</h1>
+
+      <div>
+        {loading ? (
+          <div>Loading</div>
+        ) : (
+          <div>
+            {duck.map((data) => (
+              <div key={data._id}>
+                <ul>
+                  <li>
+                    <h1>
+                      <a href="/{data.id}">{data._id}</a>
+                    </h1>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      
+    </Fragment>
   );
-}
+};
 
 export default App;

@@ -5,7 +5,12 @@ exports.getIndex = async (req, res) => {
 
     try {
         console.log(duck);
-        res.status(200).render('index', { duck: duck });
+        // Data rendered as an object and passed down into index.ejs       
+        // res.status(200).render('index', { duck: duck });
+    
+        // Data returned as json so a fetch/axios request can get it
+        res.json(duck);
+
     } catch (error) {
         console.log(error);
     }
@@ -25,7 +30,7 @@ exports.getDuck = async (req, res) => {
 };
 
 exports.getAddDuck = (req, res) => {
-    res.status(200).render('edit-duck');
+    res.status(200).render('edit-duck', { editing: false });
 };
 
 exports.getEditDuck = async (req, res) => {
@@ -55,7 +60,9 @@ exports.postDuck = (req, res) => {
     const duck = new Duck({ user: user, problem: problem, goal: goal, steps: steps });
     duck.save();
     console.log('Duck Added to the database');
-    res.status(201).redirect('/');
+    
+    // Updated the home route to the React App index page
+    res.status(201).redirect('http://localhost:3000/');
 };
 
 exports.postEditDuck = (req, res) => {
