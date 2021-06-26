@@ -1,4 +1,13 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
+import Duck from './Duck';
 
 const App = () => {
   useEffect(() => {
@@ -23,29 +32,42 @@ const App = () => {
   return (
     <Fragment>
       <h1>Duck Home</h1>
+      <Router>
+        <div>
+          {loading ? (
+            <div>Loading</div>
+          ) : (
+            <div>
+              {duck.map((data) => (
+                <div key={data._id}>
+                  <ul>
+                    <li>
+                      <h1>
+                        <Link to="/duck">{data.user}</Link>
+                        {/* <a href={data._id}></a> */}
+                      </h1>
+                    </li>
+                  </ul> 
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
 
-      <div>
-        {loading ? (
-          <div>Loading</div>
-        ) : (
-          <div>
-            {duck.map((data) => (
-              <div key={data._id}>
-                <ul>
-                  <li>
-                    <h1>
-                      <a href="/{data.id}">{data._id}</a>
-                    </h1>
-                  </li>
-                </ul>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      
+        <Switch>
+          <Route path="/duck">
+            <Duck />
+          </Route>
+        </Switch>
+      </Router>
     </Fragment>
   );
+
+
+
 };
+
+
+
 
 export default App;

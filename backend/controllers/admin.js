@@ -6,7 +6,7 @@ exports.getIndex = async (req, res) => {
     try {
         console.log(duck);
         // Data rendered as an object and passed down into index.ejs       
-        // res.status(200).render('index', { duck: duck });
+        //res.status(200).render('index', { duck: duck });
     
         // Data returned as json so a fetch/axios request can get it
         res.json(duck);
@@ -60,7 +60,7 @@ exports.postDuck = (req, res) => {
     const duck = new Duck({ user: user, problem: problem, goal: goal, steps: steps });
     duck.save();
     console.log('Duck Added to the database');
-    
+
     // Updated the home route to the React App index page
     res.status(201).redirect('http://localhost:3000/');
 };
