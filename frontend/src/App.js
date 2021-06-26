@@ -1,25 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
+
+import Duck from './Duck';
+
+const App = () => {
+  useEffect(() => {
+    const getAPI = async () => {
+      const response = await fetch('http://localhost:8080/');
+      const data = await response.json();
+
+      try {
+        console.log(data);
+        setLoading(false);
+        setDuck(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getAPI();
+  }, []);
+
+  const [duck, setDuck] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h1>Duck Home</h1>
+      <Router>
+        <div>
+          {loading ? (
+            <div>Loading</div>
+          ) : (
+            <div>
+              {duck.map((data) => (
+                <div key={data._id}>
+                  <ul>
+                    <li>
+                      <h1>
+                        <Link to="/duck">{data.user}</Link>
+                        {/* <a href={data._id}></a> */}
+                      </h1>
+                    </li>
+                  </ul> 
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <Switch>
+          <Route path="/duck">
+            <Duck />
+          </Route>
+        </Switch>
+      </Router>
+    </Fragment>
   );
-}
+
+
+
+};
+
+
+
 
 export default App;
