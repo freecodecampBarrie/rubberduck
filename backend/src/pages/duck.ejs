@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duck</title>
+</head>
+
+<body>
+    <h1>Duck</h1>
+
+    <main>
+        <h1>
+            <%= duck.user %>
+        </h1>
+        <p>
+            The problem is: <%= duck.problem %>
+        </p><p>
+            The goal is: <%= duck.goal %>
+        </p>
+        <p>
+            The # of steps: <%= duck.steps %>
+        </p>
+
+        <div>
+            <form method="POST" action="/delete">
+                <div>
+                    <input type="hidden" value="<%= duck.id %>" name="duckId" />
+                    <button>Delete</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <a href="/edit-duck/<%= duck.id %>?edit=true">Edit</a>
+        </div>
+    </main>
+</body>
+
+</html>
