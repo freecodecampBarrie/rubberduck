@@ -32,7 +32,7 @@ const App = () => {
   return (
     <Fragment>
 
-      <h1>Duck Home</h1>
+      <Link to="/"><h1>Duck Home</h1></Link>
       <Router>
         <div>
           {loading ? (
@@ -56,8 +56,8 @@ const App = () => {
         </div>
 
         <Switch>
-          <Route path="/about">
-            <Duck />
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
         
