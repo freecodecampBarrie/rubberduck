@@ -1,12 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
+import { BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
 import Duck from './Duck';
+
+const store = createStore(
+  alleducer, /* preloadedState, */
+  +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 
 const App = () => {
@@ -58,6 +57,9 @@ const App = () => {
         <Switch>
           <Route path="/">
             <Home />
+          </Route>
+          <Route path="/">
+            <Duck />
           </Route>
         </Switch>
         
