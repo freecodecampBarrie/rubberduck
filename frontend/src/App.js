@@ -7,6 +7,21 @@ import { increment, decrement, login } from './actions';
 
 
 const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/duck">
+          <Duck />
+        </Route>
+        <Route path="/">
+          <Index />
+        </Route>
+      </Switch>
+    </Router>
+  )
+}
+
+const Index = () => {
   useEffect(() => {
     const getAPI = async () => {
       const response = await fetch('http://localhost:8080/');
@@ -33,6 +48,9 @@ const App = () => {
 
   return (
     <Fragment>
+
+      <h1>Duck Home</h1>
+
         <div>
           {loading ? (
             <div>Loading</div>
@@ -66,6 +84,7 @@ const App = () => {
             </div>
           )}
         </div>
+
 
         
     </Fragment>
