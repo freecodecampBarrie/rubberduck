@@ -1,13 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+/* import Duck from './Duck'; */
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement, login } from './actions';
 
 
-import Duck from './Duck';
+
 
 const App = () => {
   return (
@@ -44,21 +41,41 @@ const Index = () => {
   const [duck, setDuck] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const counter = useSelector(state => state.counter);
+  const isLogged = useSelector(state => state.isLogged);
+  const dispatch = useDispatch();
+
+
   return (
     <Fragment>
+
       <h1>Duck Home</h1>
+
         <div>
           {loading ? (
             <div>Loading</div>
           ) : (
+            
             <div>
+              
+              <h1>Counter {counter}</h1>
+              <button onClick={() => dispatch(increment())}>+</button>
+              <button onClick={() => dispatch(decrement())}>-</button>
+              <hr />   
+              
+              {isLogged ? 
+                <div><button onClick={() => dispatch(login())}>Logoff</button>
+                  <h3>Valuable Information I should not see</h3></div> :
+              <button onClick={() => dispatch(login())}>Login</button>}
+              <hr />
+              
               {duck.map((data) => (
                 <div key={data._id}>
                   <ul>
                     <li>
                       <h1>
-                        <Link to="/duck">{data.user}</Link>
-                        {/* <a href={data._id}></a> */}
+                        {/*   <Link to={data._id}>{data.user}</Link>    */}
+                        <a href={data._id}>{data.user}</a>
                       </h1>
                     </li>
                   </ul> 
@@ -68,11 +85,10 @@ const Index = () => {
           )}
         </div>
 
+
+        
     </Fragment>
   );
-
-
-
 };
 
 
